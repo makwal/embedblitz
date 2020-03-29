@@ -1,6 +1,6 @@
 //prepare GET request with XMLHttpRequest
 const xhr = new XMLHttpRequest();
-const oEmbedURLTwitter = "https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F";
+const oEmbedURLTwitter = "https://publish.twitter.com/oembed?url=";
 const oEmbedURLInstagram = "https://api.instagram.com/oembed?url=";
 const oEmbedURLYoutube = "https://www.youtube.com/oembed?url=";
 
@@ -34,9 +34,7 @@ function clickHandler(info, tab) {
     if (info.menuItemId = getEmbedCode) {
         const postURL = info.linkUrl;
         if (postURL.startsWith("https://twitter.com/")) {
-            const splitted = postURL.split("status/");
-            const tweetID = splitted[splitted.length-1];
-            const requestURL = oEmbedURLTwitter+tweetID;
+            const requestURL = oEmbedURLTwitter+postURL;
             makeRequest(requestURL);
         } else if (postURL.startsWith("https://www.instagram.com/")) {
             const requestURL = oEmbedURLInstagram+postURL;

@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Embed-Blitz",
-    "version": "0.7",
+    "version": "0.2",
     "description": "Kopiert den Embed-Code von Tweets, Instagram-Posts oder Youtube-Videos ins Clipboard.",
     "icons": {"128": "lightning.png"},
     "background": {
@@ -9,7 +9,7 @@
         "persistent": true
         },
     "permissions": ["contextMenus",
-        "https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F",
+        "https://publish.twitter.com/oembed?url=",
         "https://api.instagram.com/oembed?url=",
         "https://www.youtube.com/oembed?=url"]
 }
